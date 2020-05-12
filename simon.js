@@ -1,6 +1,6 @@
 var STATES = {
   pregame: 0,
-  disabled: 1,
+  disabled: 1, // Bug fix #1
   waiting: 2,
   lost: 3,
 };
@@ -30,6 +30,7 @@ for (var i = 0; i < squares.length; i++) {
       var correctGuess = checkGuesses(game.pattern, game.userGuesses);
       if (correctGuess) {
         flashUserGuess(game);
+        // Bug fix #5
         if (game.userGuesses.length < game.pattern.length) {
           game.state = STATES.waiting;
         }
@@ -99,6 +100,7 @@ function checkGuesses(pattern, userGuesses) {
     if (i >= pattern.length) {
       return false;
     }
+    // Bug fix #4
     if (userGuesses[i] !== pattern[i]) {
       return false;
     }
@@ -107,6 +109,7 @@ function checkGuesses(pattern, userGuesses) {
 }
 function lostGame(game) {
   game.state = STATES.lost;
+  // Bug fix #3
   var lostMessage = document.getElementById("lost-message");
   lostMessage.className = "";
 }
