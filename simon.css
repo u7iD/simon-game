@@ -1,0 +1,85 @@
+html, body {
+  height: 100vh;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.simon-title {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  flex: 1.4;
+}
+
+.simon-title > h1 {
+  font-size: 2em;
+  padding-bottom: 1px;
+  margin-bottom: 0;
+}
+
+.simon-game {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  flex: 4;
+  padding-left: 50px;
+  max-width: 700px;
+  min-width: 400px;
+}
+
+.simon-sq {
+  margin: 6px;
+  display: flex;
+  flex-basis: calc(50% - 40px);
+  justify-content: center;
+  flex-direction: column;
+}
+
+.simon-sq > div {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.game-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+#simon-start {
+  width: 200px;
+}
+
+#lost-message {
+  display: inline;
+  text-align: center;
+  font-size: 1.8em;
+  width: 100%;
+  color: red;
+}
+
+.hidden {
+  display: none !important;
+}
+
+#s-red { background-color: red;  border-radius:320px 20px 20px; }
+#s-red.lighter { background-color: rgba(255, 0, 0, 0.5); }
+
+#s-blue { background-color: blue; border-radius:20px 320px 20px 20px;}
+#s-blue.lighter { background-color: rgba(0, 0, 255, 0.5); }
+
+#s-yellow { background-color: yellow; border-radius:20px 20px 20px 320px; }
+#s-yellow.lighter { background-color: rgba(255, 255, 0, 0.5); }
+
+#s-green { background-color: green; border-radius:20px 20px 320px 20px; }
+#s-green.lighter { background-color: rgba(0, 255, 0, 0.5); }
